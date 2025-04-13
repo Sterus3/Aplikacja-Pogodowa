@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './WeatherDetails.css';
+import WeatherMapWithLayers from './WeatherMapWithLayers';
+
 
 const WeatherDetailsPage = () => {
   const { city } = useParams();
@@ -65,6 +67,7 @@ const WeatherDetailsPage = () => {
     <div className="container">
       <h1>Pogoda w {weather.name}</h1>
       <div className="weather-section">
+      <WeatherMapWithLayers lat={weather.coord.lat} lon={weather.coord.lon} />
         <div className="weather-info">
           <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
           <div>
@@ -80,6 +83,8 @@ const WeatherDetailsPage = () => {
     </div>
   );
 };
+
+
 
 const WeatherDetails = ({ forecast }) => {
   if (!forecast || forecast.length === 0) {
