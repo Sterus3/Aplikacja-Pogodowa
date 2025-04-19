@@ -1,0 +1,5 @@
+<div class="sun-data">
+  <h2>Wschód i zachód słońca</h2>
+  <p><strong>Wschód słońca:</strong> <span id="sunrise">--:--</span></p>
+  <p><strong>Zachód słońca:</strong> <span id="sunset">--:--</span></p>
+</div>
