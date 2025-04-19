@@ -1,5 +1,5 @@
 async function fetchWeatherData(city) {
-    const apiKey = '07e21b9fc82b082f3fa3893ce5d6899b'; 
+    const apiKey = 'e11ed505b0acbd7159f7b4f8909a8f30'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pl&appid=${apiKey}`;
 
     try {
