@@ -68,3 +68,29 @@ body {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+.weather-from-location button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.weather-from-location button:hover {
+  background-color: #0056b3;
+}
+
+.weather-from-location .error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.weather-from-location div {
+  margin-top: 20px;
+}
+
