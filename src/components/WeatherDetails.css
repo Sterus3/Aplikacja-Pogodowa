@@ -225,3 +225,18 @@
   .forecast-table tr:hover {
     background-color: #d9faff;
   }
+
+
+  .weather-details-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .weather-column {
+    flex: 1;
+  }
+  
+  .weather-column p {
+    margin: 5px 0;
+  }
