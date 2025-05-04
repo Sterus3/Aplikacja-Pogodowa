@@ -212,31 +212,21 @@ button:hover {
   border: 1px solid #ddd;
 }
 
-.forecast-table th {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-}
-
-.forecast-table tr:nth-child(even) {
-  background-color: #eaf4ff;
-}
-
 .forecast-table tr:hover {
-  background-color: #d9faff;
-}
-
+    background-color: #d9faff;
+  }
 
 .weather-details-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
 .weather-column {
-  flex: 1;
-}
-
+    flex: 1;
+  }
+  
 .weather-column p {
-  margin: 5px 0;
-}
+    margin: 5px 0;
+  }
+

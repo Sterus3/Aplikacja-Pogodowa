@@ -70,12 +70,21 @@ const WeatherDetailsPage = () => {
       <WeatherMapWithLayers lat={weather.coord.lat} lon={weather.coord.lon} />
         <div className="weather-info">
           <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
-          <div>
-            <p><strong>Temperatura:</strong> {weather.main.temp}{temperatureUnit === 'metric' ? '°C' : '°F'}</p>
-            <p><strong>Warunki:</strong> {weather.weather[0].description}</p>
-            <p><strong>Wiatr:</strong> {weather.wind.speed} {temperatureUnit === 'metric' ? 'm/s' : 'mph'} ({weather.wind.deg}°)</p>
-            <p><strong>Zachmurzenie:</strong> {weather.clouds.all}%</p>
-            <p><strong>Opady:</strong> {weather.rain ? weather.rain["3h"] : 0} mm deszczu, {weather.snow ? weather.snow["3h"] : 0} mm śniegu</p>
+          <div className="weather-details-columns">
+            <div className="weather-column">
+              <p><strong>Temperatura:</strong> {weather.main.temp}{temperatureUnit === 'metric' ? '°C' : '°F'}</p>
+              <p><strong>Warunki:</strong> {weather.weather[0].description}</p>
+              <p><strong>Wiatr:</strong> {weather.wind.speed} {temperatureUnit === 'metric' ? 'm/s' : 'mph'} ({weather.wind.deg}°)</p>
+              <p><strong>Zachmurzenie:</strong> {weather.clouds.all}%</p>
+              <p><strong>Opady:</strong> {weather.rain ? weather.rain["3h"] : 0} mm deszczu, {weather.snow ? weather.snow["3h"] : 0} mm śniegu</p>
+            </div>
+            <div className="weather-column">
+              <p><strong>Ciśnienie:</strong> {weather.main.pressure} hPa</p>
+              <p><strong>Wilgotność:</strong> {weather.main.humidity}%</p>
+              <p><strong>Widoczność:</strong> {weather.visibility / 1000} km</p>
+              <p><strong>Wschód słońca:</strong> {new Date(weather.sys.sunrise * 1000).toLocaleTimeString()}</p>
+              <p><strong>Zachód słońca:</strong> {new Date(weather.sys.sunset * 1000).toLocaleTimeString()}</p>
+            </div>
           </div>
         </div>
       </div>
